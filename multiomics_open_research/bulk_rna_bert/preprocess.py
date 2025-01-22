@@ -144,6 +144,7 @@ def preprocess_rna_seq_for_bulkrnabert(
     if "identifier" in rna_seq_df.columns:
         rna_seq_df = rna_seq_df.drop(["identifier"], axis=1)
     rna_seq_array = rna_seq_df.to_numpy()
+    print(rna_seq_array + 1)
     if config.use_log_normalization:
         rna_seq_array = np.log10(rna_seq_array + 1)
     return rna_seq_array

@@ -20,3 +20,4 @@ bin
 .python_history
 .bash_history
 .config
+/morvenv
